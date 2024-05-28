@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata -->
+  <title>A-Frame Flotation Component</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Styles & Fonts -->
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Zeyada" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <!-- A-Frame -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+  <!-- A-Frame Components-->
+  <script src="components/float.js"></script>
+
+
+  <script src="components/aframe-particle-system-component.min.js"></script>
+
+  <script src="assets/a-water.v0.1.1.min.js"></script>
+</head>
+
+
+<body>
+  <a-scene fog="type: linear; color:#000000; near: 1; far: 50;">
+    <!-- Environment & Objects -->
+    <!--<a-entity position="-1 0 -10" rotation="0 35 0" floating="width: 2; depth: 4; dampening: 0.7, 1, 1; surface: #ocean;">
+      <a-box position="0 0 -1" width="3" depth="3" height="1"</a-box>
+    </a-entity>-->
+    
+    <!--<a-entity position="3 0 -5" rotation="0 35 0" floating-small="surface: #ocean;">
+      <a-box id="lifesaver-1" position="0 0 -3" scale="0.5 0.5 0.5"></a-box>
+    </a-entity>
+    <a-entity position="3 0 -5" rotation="0 35 0" floating-small="target: #lifesaver-2; surface: #ocean;">
+      <a-box id="lifesaver-2" position="0 0 -4" scale="0.5 0.5 0.5"></a-box>
+    </a-entity>
+    <a-entity position="3 0 -5" rotation="0 35 0" floating-small="target: #lifesaver-3; surface: #ocean;">
+      <a-box id="lifesaver-3" position="0 0 -5" scale="0.5 0.5 0.5"></a-box>
+    </a-entity>-->
+    <a-entity position="0 2.25 -15" particle-system="preset: dust; texture: assets/bobble.png;"></a-entity>
+
+    <!-- Defaults -->
+    <a-entity id="camera1" look-controls="enabled: true;" position="0 2 0"></a-entity>
+    <a-light type="directional" position="2 10 8" intensity="1.0"></a-light>
+    <a-sky segments-width="10" segments-height="10"></a-sky>
+    <a-ocean id="ocean" color="#0008ff" width="300" depth="300" density="90" speed="1" opacity="0.8"></a-ocean>
+  </a-scene>
+
+
+  <h1>BBBOLLE</h1>
+
+
+  <script>
+//     var scene = document.querySelector('a-scene');
+//     var camera1 = document.querySelector('#camera1');
+
+//     $('h1').click(function() {
+//       if (scene.hasLoaded) {
+//         scene.enterVR();
+//       } else {
+//         scene.addEventListener('loaded', scene.enterVR);
+//       }
+//     });
+
+//     scene.addEventListener('enter-vr', function() {
+//       camera1.setAttribute('look-controls', 'enabled', 'true');
+//       camera1.setAttribute('wasd-controls', 'enabled', 'true');
+//     });
+
+//     scene.addEventListener('exit-vr', function() {
+//       camera1.setAttribute('look-controls', 'enabled', 'false');
+//       camera1.setAttribute('wasd-controls', 'enabled', 'false');
+//     });
+  </script>
+</body>
+
+</html>
